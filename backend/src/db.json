@@ -1,0 +1,19 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Teclado RedDragon Dark Avenger",
+      "price": 270
+    },
+    {
+      "id": 2,
+      "name": "Mouse Logitech g300s",
+      "price": 90
+    },
+    {
+      "id": 3,
+      "name": "Headset Havit H2002D",
+      "price": 250
+    }
+  ]
+}
