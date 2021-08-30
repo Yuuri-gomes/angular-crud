@@ -1,6 +1,6 @@
 .side-nav{
     background-color: #3f51b5;
-    width: 12.5em;
+    width: 10.5rem;
 }
 
 .side-nav a {
@@ -8,5 +8,10 @@
 }
 
 .side-nav i{
-    padding-right: 0.625em;
+    padding-right: 0.825rem;
+}
+
+.content {
+    padding: 1rem;
+    background-color: #FFF;
 }
