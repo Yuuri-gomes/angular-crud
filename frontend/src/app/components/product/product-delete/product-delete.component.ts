@@ -1,6 +1,7 @@
-import { Product } from './../product.model';
+import { HeaderService } from './../../../services/header.service';
+import { Product } from '../../../models/product.model';
 import { Router, ActivatedRoute } from '@angular/router';
-import { ProductService } from './../product.service';
+import { ProductService } from '../../../services/product.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -12,7 +13,14 @@ export class ProductDeleteComponent implements OnInit {
 
   product: Product;
 
-  constructor(private productService: ProductService, private router: Router, private route: ActivatedRoute) { }
+  constructor(private productService: ProductService, private router: Router, private route: ActivatedRoute, headerService: HeaderService) {
+    const id = +this.route.snapshot.paramMap.get('id');
+    headerService.headerData = {
+      title: 'Exclusão de produto',
+      icon: 'delete',
+      routeUrl: `/products/delete/${id}`
+    }
+  }
 
   ngOnInit(): void {
     const id = +this.route.snapshot.paramMap.get("id");
